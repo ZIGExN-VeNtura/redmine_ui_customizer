@@ -1,0 +1,7 @@
+<fieldset class="box">
+  <legend>Users Page</legend>
+  <p>
+    <%= check_box_tag 'settings[hide_delete_user_btn]', '1', @settings['hide_delete_user_btn'] == '1' %>
+    <label for="settings_hide_delete_user_btn">Hide delete button in context menu</label>
+  </p>
+</fieldset>
