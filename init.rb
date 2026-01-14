@@ -2,7 +2,7 @@ require_relative 'lib/redmine_ui_customizer/hooks'
 
 Redmine::Plugin.register :redmine_ui_customizer do
   name 'Redmine UI Customizer'
-  author 'Your Name'
+  author 'Ventura Development Team'
   description 'Customize Redmine UI elements across pages'
   version '1.0.0'
   url 'https://github.com/ZIGExN-VeNtura/redmine_ui_customizer'
