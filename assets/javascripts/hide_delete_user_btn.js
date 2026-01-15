@@ -1,15 +1,26 @@
 (function() {
-  // Check if on users page (flexible matching)
-  if (!window.location.pathname.match(/\/users\/?$/)) return;
-
   function hideDeleteButton() {
-    var deleteItem = document.querySelector('#context-menu > ul > li:nth-child(3)');
-    if (deleteItem) {
-      deleteItem.style.display = 'none';
+    var pathname = window.location.pathname;
+
+    // Hide delete in context menu (user list page)
+    if (pathname.match(/\/users\/?$/)) {
+      var deleteItem = document.querySelector('#context-menu > ul > li:nth-child(3)');
+      if (deleteItem) {
+        deleteItem.style.display = 'none';
+      }
+    }
+
+    // Hide delete button on user edit page (/users/123/edit)
+    if (pathname.match(/\/users\/\d+/)) {
+      var deleteLink = document.querySelector('a.icon.icon-del');
+      if (deleteLink) {
+        deleteLink.style.display = 'none';
+      }
     }
   }
 
   function init() {
+    hideDeleteButton();
     var observer = new MutationObserver(function() {
       hideDeleteButton();
     });

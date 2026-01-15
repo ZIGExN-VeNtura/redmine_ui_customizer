@@ -4,7 +4,7 @@ Redmine::Plugin.register :redmine_ui_customizer do
   name 'Redmine UI Customizer'
   author 'Ventura Development Team'
   description 'Customize Redmine UI elements across pages'
-  version '1.0.0'
+  version '1.0.1'
   url 'https://github.com/ZIGExN-VeNtura/redmine_ui_customizer'
   author_url 'https://github.com/orgs/ZIGExN-VeNtura/teams/r-and-d'
 
